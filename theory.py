@@ -15,9 +15,12 @@ def odds(start: int , stop: int):
 
 # Corouritines: (Consumer) Consume values
 
-#sync version
-def randn():
-    time.sleep(3)
+# In order to use await, we need the function to be async
+async def randn():
+    #await allows this particular function to pause
+    # But other things can continue to run. 
+    # We could imagine this as "running in the background"
+    await asyncio.sleep(3)
     return randint(1,10)
 
 def main():
