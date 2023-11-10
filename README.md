@@ -15,7 +15,8 @@ I found out that the 'asyncio' library for python can run multiple tasks asynchr
 - **Best Practices and Examples:** Discover best practices and practical examples for implementing `asyncio` in different scenarios.
 
 ## summer.py
-A short script to practice with aiohttp using an API from qrng to get random numbers.
+A short script to practice with aiohttp using an API from https://quantumnumbers.anu.edu.au/ to get random numbers.
+ In this script we make m requests to the API in order to get the sum of n random numbers using m workers (each async call to the coroutine worker). 
 
 ## Sources
 realpython.com

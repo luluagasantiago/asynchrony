@@ -10,6 +10,9 @@ async def worker(name, n, session):
     print(f"worker: {name}")
     url = f"https://api.quantumnumbers.anu.edu.au"
     params = {'length': n, 'type': 'uint16', 'size': '1'}
+    # This api key will be deactivated
+    # If you want to test this code, you can get one here for free:
+    # https://quantumnumbers.anu.edu.au/
     headers = {'x-api-key': 'Z355gDqnFb3NMYytkSGzF4qNNaHtIbTB5raEoo3a'}
     # await because we'll do asynchronous io
     response = await session.get(url, params = params, headers= headers)
@@ -20,7 +23,7 @@ async def worker(name, n, session):
 
 async def main():
     async with aiohttp.ClientSession() as session:
-        sums = await asyncio.gather(*(worker(f'w{i}', n, session) for i, n in enumerate(range(2,5))))
+        sums = await asyncio.gather(*(worker(f'w{i}', n, session) for i, n in enumerate(range(2,30))))
         print("sums: ", sums)
 
 
