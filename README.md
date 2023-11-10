@@ -14,3 +14,8 @@ I found out that the 'asyncio' library for python can run multiple tasks asynchr
 - **Concurrency and Parallelism:** Delve into the difference between concurrency and parallelism in the context of `asyncio`.
 - **Best Practices and Examples:** Discover best practices and practical examples for implementing `asyncio` in different scenarios.
 
+## summer.py
+A short script to practice with aiohttp using an API from qrng to get random numbers.
+
+## Sources
+realpython.com
